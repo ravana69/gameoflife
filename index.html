@@ -27,11 +27,11 @@
       }
 
       .controls button {
-	  color: #FFFFFF !important;
+	  color: #ff0000 !important;
 	  text-transform: uppercase;
 	  background: #000000;
 	  padding: 10px;
-	  border: 2px solid #FFFFFF !important;
+	  border: 2px solid #ff0000 !important;
 	  display: inline-block;
 	  transition: all 0.3s ease 0s;
 	  cursor:pointer;
@@ -178,7 +178,7 @@
               context.moveTo(p, x + p);
               context.lineTo(bw + p, x + p);
 	  }
-	  context.strokeStyle = "#FFFFFF";
+	  context.strokeStyle = "#ff0000";
 	  context.stroke();
       }
 
@@ -189,12 +189,12 @@
 	  drawBoard();
 	  if(gen.length > 0){
 	      const len = gen.length;
-	      context.fillStyle = "#FFFFFF";
+	      context.fillStyle = "#ff0000";
 	      for(let i=0;i<len;i++){
 		  context.fillRect(gen[i].x, gen[i].y, 10, 10);
 	      }
 	  }else{
-	      context.fillStyle = "#FFFFFF";
+	      context.fillStyle = "#ff0000";
 	  }
       }
 
@@ -213,7 +213,7 @@
 	      board.splice(i, 1);
 	      context.fillStyle = "#000000";
 	      context.fillRect(square.left, square.top, 10, 10);
-	      context.fillStyle = "#FFFFFF";
+	      context.fillStyle = "#ff0000";
 	      drawBoard();
 	  } else{
 	      board.push({x: square.left, y: square.top});

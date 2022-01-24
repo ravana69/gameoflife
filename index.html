@@ -27,18 +27,18 @@
       }
 
       .controls button {
-	  color: #000000 !important;
+	  color: #FFFFFF !important;
 	  text-transform: uppercase;
-	  background: #ffffff;
+	  background: #000000;
 	  padding: 10px;
-	  border: 2px solid #000000 !important;
+	  border: 2px solid #FFFFFF !important;
 	  display: inline-block;
 	  transition: all 0.3s ease 0s;
 	  cursor:pointer;
       }
 
       .controls button:active {
-	  box-shadow: 0 5px #0000;
+	  box-shadow: 0 5px #000000;
 	  transform: translateY(2px);
       }
     </style>
@@ -178,23 +178,23 @@
               context.moveTo(p, x + p);
               context.lineTo(bw + p, x + p);
 	  }
-	  context.strokeStyle = "#000000";
+	  context.strokeStyle = "#FFFFFF";
 	  context.stroke();
       }
 
       //given a generation array fill the appropriate squares in canvas
       function drawGeneration(gen){
-	  context.fillStyle = "#FFFFFF";
+	  context.fillStyle = "#000000";
 	  context.fillRect(0,0,600,600);
 	  drawBoard();
 	  if(gen.length > 0){
 	      const len = gen.length;
-	      context.fillStyle = "#000000";
+	      context.fillStyle = "#FFFFFF";
 	      for(let i=0;i<len;i++){
 		  context.fillRect(gen[i].x, gen[i].y, 10, 10);
 	      }
 	  }else{
-	      context.fillStyle = "#000000";
+	      context.fillStyle = "#FFFFFF";
 	  }
       }
 
@@ -211,9 +211,9 @@
 	  if(cell != undefined){
 	      let i = board.indexOf(cell);
 	      board.splice(i, 1);
-	      context.fillStyle = "#FFFFFF";
-	      context.fillRect(square.left, square.top, 10, 10);
 	      context.fillStyle = "#000000";
+	      context.fillRect(square.left, square.top, 10, 10);
+	      context.fillStyle = "#FFFFFF";
 	      drawBoard();
 	  } else{
 	      board.push({x: square.left, y: square.top});
